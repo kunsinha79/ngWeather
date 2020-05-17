@@ -1,0 +1,30 @@
+<div class="weather-info-heading">
+  <h2>Current Weather for 5 Cities</h2>
+</div>
+<div class="weather-info-content" role="main">
+  <mat-card
+    *ngFor="let city of data | async; index as i"
+    class="weather-info-content--card"
+  >
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img
+          src="http://openweathermap.org/img/wn/{{
+            city.weather[0].icon
+          }}@2x.png"
+          height="40"
+          width="40"
+        />
+      </div>
+      <mat-card-title>{{ city.name }}</mat-card-title>
+      <mat-card-subtitle>{{ city.weather[0].main }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>{{ city.main.temp }}&deg;F</h2>
+      <p>{{ city.wind.speed }} miles/h</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <p class="next" routerLink="/weatherDetail/{{ i }}">View Next 48 Hours</p>
+    </mat-card-actions>
+  </mat-card>
+</div>

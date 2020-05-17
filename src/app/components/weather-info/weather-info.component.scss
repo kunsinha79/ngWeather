@@ -1,0 +1,21 @@
+.weather-info {
+  &-heading {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  &-content {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    &--card {
+      flex-flow: wrap;
+      width: 200px;
+    }
+
+    .next {
+      cursor: pointer;
+    }
+  }
+}

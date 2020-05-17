@@ -1,0 +1,16 @@
+.weather-error {
+  p {
+    cursor: pointer;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+
+  .not-found {
+    margin: 40px;
+    font-weight: 400;
+    font-size: 25px;
+    word-wrap: break-word;
+  }
+}
