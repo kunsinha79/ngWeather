@@ -1,5 +1,6 @@
-<div class="weather-card">
-  <div class="weather-card-header">
+<p>weather-hourly works!</p>
+<div class="weather-hourly">
+  <div class="weather-hourly-header">
     <img
       src="../../../assets/images/{{ country | lowercase }}.jpg"
       height="40"
@@ -12,7 +13,7 @@
   <div *ngIf="!isLoading; else spinner">
     <mat-card *ngFor="let h of hourlyWeather">
       <mat-card-header>
-        <mat-card-title class="weather-card-header-wrapper">
+        <mat-card-title class="weather-hourly-header-wrapper">
           <div class="date">
             {{ h.dateConversion | date: 'short' }}
           </div>
@@ -27,7 +28,7 @@
           <span class=".temp-phrase">{{ h.weather[0].main }}</span>
         </mat-card-title>
       </mat-card-header>
-      <mat-card-content class="weather-card-content-wrapper">
+      <mat-card-content class="weather-hourly-content-wrapper">
         <div class="panel">
           <p>Real feel: {{ h.feels_like }}&deg;F</p>
           <p>Wind: {{ h.wind_speed }} miles/h</p>

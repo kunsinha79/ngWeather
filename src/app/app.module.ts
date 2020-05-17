@@ -11,15 +11,15 @@ import { AppComponent } from './app.component';
 import { WeatherInfoComponent } from './components/weather-info/weather-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherInfoService } from './services/weather-info.service';
-import { WeatherCardComponent } from './components/weather-card/weather-card.component';
-import { WeatherErrorComponent } from './components/weather-error/weather-error/weather-error.component';
+import { WeatherErrorComponent } from './components/weather-error/weather-error.component';
+import { WeatherHourlyComponent } from './components/weather-hourly/weather-hourly.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherInfoComponent,
-    WeatherCardComponent,
     WeatherErrorComponent,
+    WeatherHourlyComponent,
   ],
   imports: [
     BrowserModule,
