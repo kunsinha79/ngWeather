@@ -6,7 +6,7 @@
       width="40"
     />
     <h2>Hourly Weather for {{ country }}</h2>
-    <p routerLink="/weather">View All Cities</p>
+    <a mat-button routerLink="/weather">View All Cities</a>
   </div>
 
   <div *ngIf="!isLoading; else spinner">

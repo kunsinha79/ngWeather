@@ -16,7 +16,7 @@
           width="40"
         />
       </div>
-      <mat-card-title>{{ city.name }}</mat-card-title>
+      <mat-card-title style="city-name">{{ city.name }}</mat-card-title>
       <mat-card-subtitle>{{ city.weather[0].main }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
@@ -24,7 +24,9 @@
       <p>{{ city.wind.speed }} miles/h</p>
     </mat-card-content>
     <mat-card-actions>
-      <p class="next" routerLink="/weatherDetail/{{ i }}">View Next 48 Hours</p>
+      <a mat-raised-button routerLink="/weatherDetail/{{ i }}"
+        >View Next 48 Hours</a
+      >
     </mat-card-actions>
   </mat-card>
 </div>
